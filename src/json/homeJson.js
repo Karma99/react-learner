@@ -7,7 +7,7 @@ export const menuItems = [
         submenu : []
     },
     {
-        name : 'Quick Menu',
+        name : 'Quick Notes',
         link : '',
         submenu : [
             {
@@ -29,40 +29,40 @@ export const menuItems = [
     },
     {
         name : 'Class Component Examples',
-        link : '',
+        link : '/example/class-component',
         submenu : [
             {
-                link : '',
+                link : 'clock',
                 name : 'Clock',
                 divider: false
             },
             {
-                link : '',
+                link : 'warning',
                 name : 'Warning',
                 divider: false
             },
             {
-                link : '',
+                link : 'toggle',
                 name : 'Toggle',
                 divider: false
             },
             {
-                link : '',
+                link : 'login',
                 name : 'Login',
                 divider: false
             },
             {
-                link : '',
+                link : 'form',
                 name : 'Form',
                 divider: false
             },
             {
-                link : '',
+                link : 'calculator',
                 name : 'Temperature Calculator',
                 divider: true
             },
             {
-                link : '',
+                link : 'search-product',
                 name : 'Search Product',
                 divider: true
             }      
@@ -70,10 +70,10 @@ export const menuItems = [
     },
     {
         name : 'Hook Examples',
-        link : '',
+        link : '/example/hook',
         submenu : [
             {
-                link : '',
+                link : 'click-counter',
                 name : 'Click Counter',
                 divider: false
             }

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import logo from '../assets/images/logo.svg';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
@@ -12,18 +14,17 @@ export default function HeaderMenu(props){
     const progressInstance = <ProgressBar   
         striped
         animated  
-        variant="warning" 
+        variant="warning"
+        className='scroll-progress d-none' 
         now={now} 
-        className="fixed-top" 
-        style={{ marginTop:"4.6rem", height: "0.4rem"}}
     />;
     
     return (
         <header className="mb-5">
             <Navbar bg="primary" variant="dark" expand="lg" fixed="top" >
                 <Container>
-                    <Navbar.Brand href="#home">
-                        <Image src={logo} alt="..." width="50" height="50" /> 
+                    <Navbar.Brand href="/">
+                        <Image className="App-logo" src={logo} alt="..." width="50" height="50" /> 
                         React Js Learner
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="react-learner-nav" />
@@ -46,9 +47,19 @@ export default function HeaderMenu(props){
                                                     }
 
                                                     submenu.push(
-                                                        <NavDropdown.Item href={subItem.link} key={'submenu-'+ index + '-' + subIndex}>
-                                                            {subItem.name}
-                                                        </NavDropdown.Item>
+                                                        /* No Page Redirection : SPA
+                                                            <NavDropdown.Item href={item.link + '/' +subItem.link} key={'submenu-'+ index + '-' + subIndex}>
+                                                              {subItem.name}
+                                                            </NavDropdown.Item>
+                                                        */
+                                                        <Link 
+                                                            className="dropdown-item" 
+                                                            to={item.link + '/' +subItem.link} 
+                                                            key={'submenu-'+ index + '-' + subIndex}
+                                                            data-rr-ui-dropdown-item=""
+                                                        > 
+                                                            {subItem.name} 
+                                                        </Link>
                                                     );
                                                 })
                                             }
@@ -60,10 +71,15 @@ export default function HeaderMenu(props){
                                 }
                                 else{
                                     
-                                    return (
-                                        <Nav.Link href={item.link} key={'menu-' + index}>
-                                            {item.name}
-                                        </Nav.Link>
+                                    return ( 
+                                        <Link 
+                                            className="nav-link" 
+                                            to={item.link} 
+                                            key={'menu-' + index}
+                                            data-rr-ui-event-key="/"
+                                        > 
+                                            {item.name} 
+                                        </Link>
                                     );
                                 }
                             })

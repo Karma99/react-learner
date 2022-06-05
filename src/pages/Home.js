@@ -1,25 +1,20 @@
 import React from "react";
-import { menuItems, sliderImages, toDoList, faqList } from '../json/homeJson.js';
-import { generateList } from '../utils/CommonFunctions.js';
-import HeaderMenu from '../components/HeaderMenu.js';
 import ImageSlider from '../components/ImageSlider.js';
 import ToDoList from '../components/ToDoList.js';
 import Faq from '../components/Faq.js';
-import Footer from '../components/Footer.js';
 
-export default function Home(){
+
+export default function Home(props){
 
     return (
         <div className="home-container">
-            <HeaderMenu menuItems={menuItems} />
 
-            <ImageSlider sliderImages={sliderImages} />
+            <ImageSlider sliderImages={props.homePage.sliderImages} />
 
-            <ToDoList toDoList={toDoList} generateList={generateList}/>
+            <ToDoList toDoList={props.homePage.toDoList} generateList={props.homePage.generateList}/>
 
-            <Faq faqList={faqList} />
-
-            <Footer />
+            <Faq faqList={props.homePage.faqList} />
+   
         </div>
     );
 }

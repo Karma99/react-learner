@@ -15,7 +15,7 @@ export default function HeaderMenu(props){
         variant="warning" 
         now={now} 
         className="fixed-top" 
-        style={{ "margin-top":"4.6rem", height: "0.4rem"}}
+        style={{ marginTop:"4.6rem", height: "0.4rem"}}
     />;
     
     return (

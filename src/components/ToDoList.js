@@ -13,14 +13,14 @@ export default function ToDoList(props){
               props.toDoList.map((item, index) => {
               
                 return (
-                  <Col>
+                  <Col key={'col-' + index}>
                     <Card key={'todo-' + index} border={item.border} className="m-2">
                       <Card.Header>{item.header}</Card.Header>
                       <Card.Body>
                         <Card.Title>{item.title}</Card.Title>
-                        <Card.Text className="p-2">
+                        <div className="p-2">
                           { (item.text.length === 1) ? item.text[1] : props.generateList(item.text) }
-                        </Card.Text>
+                        </div>
                         <a className="p-2" href={item.link} target="_blank" rel='noreferrer'>{item.linkName}</a>
                       </Card.Body>
                       <Card.Footer className="text-muted">{ `TimeLine : ${item.timeline}` }</Card.Footer>

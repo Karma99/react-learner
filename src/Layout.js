@@ -11,13 +11,6 @@ function Layout(props) {
       <HeaderMenu menuItems={props.menuItems} />
 
        <div className="body-container">
-        <Breadcrumb>
-          <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-          <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
-            Library
-          </Breadcrumb.Item>
-          <Breadcrumb.Item active>Data</Breadcrumb.Item>
-        </Breadcrumb>
           {/* Load Dynamic Body Component */}
           <Outlet />
 

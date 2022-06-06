@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 
 function WelcomeMessage(props){
     return (

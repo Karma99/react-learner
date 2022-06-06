@@ -4,10 +4,10 @@ import ToDoList from '../components/ToDoList.js';
 import Faq from '../components/Faq.js';
 
 
-export default function Home(props){
+const Home = (props) => {
 
     return (
-        <div className="home-container">
+        <div className="home-wrapper">
 
             <ImageSlider sliderImages={props.homePage.sliderImages} />
 
@@ -17,4 +17,6 @@ export default function Home(props){
    
         </div>
     );
-}
+};
+
+export default Home;

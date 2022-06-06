@@ -20,7 +20,7 @@ export default function HeaderMenu(props){
     />;
     
     return (
-        <header className="mb-5">
+        <header>
             <Navbar bg="primary" variant="dark" expand="lg" fixed="top" >
                 <Container>
                     <Navbar.Brand href="/">

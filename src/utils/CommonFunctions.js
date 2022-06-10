@@ -8,3 +8,5 @@ export function generateList(itemList)
         </ul>  
     );
 }
+
+export const ucFirst = ([ first, ...rest ], locale = navigator.language) => first.toLocaleUpperCase(locale) + rest.join('');

@@ -9,7 +9,7 @@ import {
 import './assets/css/custom.css';
 import { menuItems, sliderImages, toDoList, faqList } from './json/homeJson.js';
 import { PRODUCTS } from './json/exampleJson.js';
-import { generateList } from './utils/CommonFunctions.js';
+import  * as common  from './utils/CommonFunctions.js';
 
 import Layout from './Layout';
 import Home from './pages/Home.js';
@@ -35,17 +35,18 @@ root.render(
     <BrowserRouter>
       <Routes>
         
-        <Route path="/" element={<Layout menuItems={menuItems} />} >
-          
-          <Route index element={
-            <Home homePage={{
-                sliderImages: sliderImages, 
-                toDoList:     toDoList, 
-                faqList:      faqList, 
-                generateList: generateList
+        {/* Start Layout Route wrapper */}
+        <Route path="/" element={
+            <Layout homeJson={{
+                menuItems: menuItems,
+                sliderImages: sliderImages
               }}
+              common={common} 
             />
-          } />
+          } 
+        >
+          
+          <Route index element={<Home homeJson={{toDoList:toDoList, faqList:faqList, generateList: common.generateList}}/>} />
 
           <Route path="quick-note">
             <Route path="react-installation" />
@@ -53,24 +54,21 @@ root.render(
             <Route path="react-doc-summary" />
           </Route>
 
-          <Route path="example">
-
-            <Route path="class-component">
-              <Route path="clock"   element={<Clock />} />
-              <Route path="warning" element={<Warning />}/>
-              <Route path="toggle"  element={<Toggle />}/>
-              <Route path="login"   element={<Login />}/>
-              <Route path="form"    element={<Form />}/>
-              <Route path="calculator"     element={<Calculator />}/>
-              <Route path="search-product" element={<FilterableProductTable products={PRODUCTS} />}/>
-            </Route>
-
-            <Route path="hook">
-              <Route path="click-counter" element={<Counter />} />
-            </Route>
-          
+          <Route path="class-component-examples">
+            <Route path="clock"   element={<Clock />} />
+            <Route path="warning" element={<Warning />}/>
+            <Route path="toggle"  element={<Toggle />}/>
+            <Route path="login"   element={<Login />}/>
+            <Route path="form"    element={<Form />}/>
+            <Route path="calculator"     element={<Calculator />}/>
+            <Route path="search-product" element={<FilterableProductTable products={PRODUCTS} />}/>
           </Route>
 
+          <Route path="hook-examples">
+            <Route path="click-counter" element={<Counter />} />
+          </Route>
+        
+        {/* End of Layout Route wrapper */}
         </Route>
 
       </Routes>

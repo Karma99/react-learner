@@ -1,20 +1,32 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HeaderMenu from './components/HeaderMenu.js';
+import ImageSlider from './components/ImageSlider.js';
+import PageBreadcrumb from './components/PageBreadcrumb.js';
 import Footer from './components/Footer.js';
-import { Outlet } from 'react-router-dom';
-import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import { Outlet, useLocation } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+
 
 function Layout(props) {
+  
+  const location = useLocation();
+  
   return (
     <div className="app-container">
-      <HeaderMenu menuItems={props.menuItems} />
+      <HeaderMenu menuItems={props.homeJson.menuItems} />
+      {
+        location.pathname === "/" && 
+        <ImageSlider sliderImages={props.homeJson.sliderImages} />
+      }
+    
+      <Container className="body-container">
+        <PageBreadcrumb ucFirst={props.common.ucFirst}/>
+        
+        {/* Load Dynamic Body Component */}
+        <Outlet />
 
-       <div className="body-container">
-          {/* Load Dynamic Body Component */}
-          <Outlet />
-
-        </div>
+      </Container>
 
       <Footer />
     </div>

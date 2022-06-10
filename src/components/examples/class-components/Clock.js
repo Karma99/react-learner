@@ -1,5 +1,4 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 
 function WelcomeMessage(props){
@@ -36,7 +35,7 @@ export default class Clock extends React.Component{
         const codeFilePath = require("../../../uploads/class-components/clock.txt");
         
         return (
-            <Container className="my-5">
+            <div className="my-4">
                 <Card className="neonBg text-center">
                     <Card.Body>
                         <Card.Text>
@@ -57,7 +56,7 @@ export default class Clock extends React.Component{
                         <iframe title="Clock" className="code-block" type="text/plain" src={codeFilePath} ></iframe>  
                     </Card.Body>
                 </Card>
-            </Container>
+            </div>
         );
     }
 }

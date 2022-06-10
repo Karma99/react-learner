@@ -29,7 +29,7 @@ export const menuItems = [
     },
     {
         name : 'Class Component Examples',
-        link : '/example/class-component',
+        link : '/class-component-examples',
         submenu : [
             {
                 link : 'clock',
@@ -70,7 +70,7 @@ export const menuItems = [
     },
     {
         name : 'Hook Examples',
-        link : '/example/hook',
+        link : '/hook-examples',
         submenu : [
             {
                 link : 'click-counter',

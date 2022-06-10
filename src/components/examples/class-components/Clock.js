@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import DownloadCode from '../../DownloadCode.js';
 
 function WelcomeMessage(props){
     return (
@@ -32,7 +33,7 @@ export default class Clock extends React.Component{
 
     render(){
         
-        const codeFilePath = require("../../../uploads/class-components/clock.txt");
+        const codeFilePath = require("../../../uploads/class-components/Clock.txt");
         
         return (
             <div className="my-4">
@@ -48,14 +49,7 @@ export default class Clock extends React.Component{
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Card bg="light" border="light">
-                    <Card.Header className="text-center">
-                        <a className="btn btn-primary" href={codeFilePath} download>Clock &#8595;</a>
-                    </Card.Header>
-                    <Card.Body >
-                        <iframe title="Clock" className="code-block" type="text/plain" src={codeFilePath} ></iframe>  
-                    </Card.Body>
-                </Card>
+                <DownloadCode codeFilePath={codeFilePath} />
             </div>
         );
     }

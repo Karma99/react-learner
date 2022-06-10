@@ -7,7 +7,7 @@ export const menuItems = [
         submenu : []
     },
     {
-        name : 'Quick Notes',
+        name : 'Quick notes',
         link : '',
         submenu : [
             {
@@ -28,7 +28,7 @@ export const menuItems = [
         ],
     },
     {
-        name : 'Class Component Examples',
+        name : 'Class component examples',
         link : '/class-component-examples',
         submenu : [
             {
@@ -37,13 +37,13 @@ export const menuItems = [
                 divider: false
             },
             {
-                link : 'warning',
-                name : 'Warning',
+                link : 'toggle',
+                name : 'Toggle',
                 divider: false
             },
             {
-                link : 'toggle',
-                name : 'Toggle',
+                link : 'warning',
+                name : 'Warning',
                 divider: false
             },
             {
@@ -69,7 +69,7 @@ export const menuItems = [
         ],
     },
     {
-        name : 'Hook Examples',
+        name : 'Hook examples',
         link : '/hook-examples',
         submenu : [
             {

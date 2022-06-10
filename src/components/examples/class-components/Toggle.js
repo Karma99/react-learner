@@ -1,4 +1,7 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import DownloadCode from '../../DownloadCode.js';
 
 export default class Toggle extends React.Component{
     
@@ -11,15 +14,27 @@ export default class Toggle extends React.Component{
     }
     
     handleClick(t) {    
-        console.log(t);
         this.setState(prevState => ({ isToggleOn: !prevState.isToggleOn }));  
     }
     
     render() {
+        const codeFilePath = require("../../../uploads/class-components/Toggle.txt");
+
         return (
-            <button onClick={this.handleClick} className="button-toggle">  
-                <span>{this.state.isToggleOn ? 'On' : 'Off'}</span>
-            </button>
+            <div className="my-4">
+                <Card>
+                    <Card.Body>
+                        <Card.Text>
+                        
+                            <Button onClick={this.handleClick} variant={this.state.isToggleOn ? 'success' : 'danger'}>
+                                {this.state.isToggleOn ? 'On' : 'Off'}
+                            </Button>
+                                
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+                <DownloadCode codeFilePath={codeFilePath} />
+            </div>         
         );
     }
 }

@@ -8,3 +8,11 @@ export const PRODUCTS = [
     {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
     {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
 ];
+
+/* Product Form */
+export const PRODUCT_OPTIONS = [
+    { value: 'size', label: 'Size' },
+    { value: 'color', label: 'Color' },
+    { value: 'material', label: 'material' },
+    { value: 'weight', label: 'Weight' }
+];

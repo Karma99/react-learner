@@ -1,6 +1,5 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
-import DownloadCode from '../../DownloadCode.js';
+import ExampleBody from '../../../utils/ExampleBody.js';
 
 function WelcomeMessage(props){
     return (
@@ -36,21 +35,14 @@ export default class Clock extends React.Component{
         const codeFilePath = require("../../../uploads/class-components/Clock.txt");
         
         return (
-            <div className="my-4">
-                <Card className="neonBg text-center">
-                    <Card.Body>
-                        <Card.Text>
-                            {/* React Containment : wrapping children elements (Topic : Composition ) */ }
-                            <WelcomeMessage>
-                                <h1>Hello, <span className="flickerText">Earth</span>!</h1>
-                                <hr/>
-                                <h2>{this.state.date.toLocaleTimeString()}.</h2>
-                            </WelcomeMessage>
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-                <DownloadCode codeFilePath={codeFilePath} />
-            </div>
+            <ExampleBody codeFilePath={codeFilePath} className="neonBg text-center">
+                {/* React Containment : wrapping children elements (Topic : Composition ) */ }
+                <WelcomeMessage>
+                    <h1>Hello, <span className="flickerText">Earth</span>!</h1>
+                    <hr/>
+                    <h2>{this.state.date.toLocaleTimeString()}.</h2>
+                </WelcomeMessage>
+            </ExampleBody>
         );
     }
 }

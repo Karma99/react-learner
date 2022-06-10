@@ -1,7 +1,6 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import DownloadCode from '../../DownloadCode.js';
+import ExampleBody from '../../../utils/ExampleBody.js';
 
 function ListItem(props) {
     // Correct! There is no need to specify the key here:  
@@ -70,24 +69,17 @@ export default class Warning extends React.Component{
         const codeFilePath = require("../../../uploads/class-components/Warning.txt");
         
         return (
-            <div className="my-4">
-                <Card>
-                    <Card.Body>
-                        <Card.Text>
-                            {/* React Containment : without using props.children (Topic : Composition ) */}
-                            <Dailog 
-                                warning={<WarningBanner warn={this.state.showWarning} />}
-                                button={
-                                    <Button onClick={this.handleToggleClick} variant={this.state.showWarning ? 'danger' : 'success'}>
-                                        {this.state.showWarning ? 'Hide' : 'Show'}
-                                    </Button>
-                                }
-                            />
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-                <DownloadCode codeFilePath={codeFilePath} />
-            </div>
+            <ExampleBody codeFilePath={codeFilePath}>
+                {/* React Containment : without using props.children (Topic : Composition ) */}
+                <Dailog 
+                    warning={<WarningBanner warn={this.state.showWarning} />}
+                    button={
+                        <Button onClick={this.handleToggleClick} variant={this.state.showWarning ? 'danger' : 'success'}>
+                            {this.state.showWarning ? 'Hide' : 'Show'}
+                        </Button>
+                    }
+                />
+            </ExampleBody>
         );
     }
 }

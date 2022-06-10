@@ -1,7 +1,7 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
+import ExampleBody from '../../../utils/ExampleBody.js';
 import Button from 'react-bootstrap/Button';
-import DownloadCode from '../../DownloadCode.js';
+
 
 export default class Toggle extends React.Component{
     
@@ -21,20 +21,11 @@ export default class Toggle extends React.Component{
         const codeFilePath = require("../../../uploads/class-components/Toggle.txt");
 
         return (
-            <div className="my-4">
-                <Card>
-                    <Card.Body>
-                        <Card.Text>
-                        
-                            <Button onClick={this.handleClick} variant={this.state.isToggleOn ? 'success' : 'danger'}>
-                                {this.state.isToggleOn ? 'On' : 'Off'}
-                            </Button>
-                                
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-                <DownloadCode codeFilePath={codeFilePath} />
-            </div>         
+            <ExampleBody codeFilePath={codeFilePath}>                      
+                <Button onClick={this.handleClick} variant={this.state.isToggleOn ? 'success' : 'danger'}>
+                    {this.state.isToggleOn ? 'On' : 'Off'}
+                </Button> 
+            </ExampleBody>            
         );
     }
 }

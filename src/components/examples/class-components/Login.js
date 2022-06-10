@@ -1,8 +1,6 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
+import ExampleBody from '../../../utils/ExampleBody.js';
 import Button from 'react-bootstrap/Button';
-import DownloadCode from '../../DownloadCode.js';
-
 
 function LoginButton(props) {
     
@@ -35,19 +33,12 @@ export default class Login extends React.Component{
         const codeFilePath = require("../../../uploads/class-components/Login.txt");
 
         return (
-            <div className="my-4">
-                <Card>
-                    <Card.Body>
-                        <Card.Text>
-                            {this.state.isLoggedIn 
-                                ? <LogoutButton onClick={this.handleLogoutClick.bind(this, new Date().toLocaleTimeString())} /> 
-                                : <LoginButton onClick={this.handleLoginClick.bind(this, new Date().toLocaleTimeString())} />
-                            }   
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-                <DownloadCode codeFilePath={codeFilePath} />
-            </div> 
+            <ExampleBody codeFilePath={codeFilePath}>
+                {this.state.isLoggedIn 
+                    ? <LogoutButton onClick={this.handleLogoutClick.bind(this, new Date().toLocaleTimeString())} /> 
+                    : <LoginButton onClick={this.handleLoginClick.bind(this, new Date().toLocaleTimeString())} />
+                }   
+             </ExampleBody>            
         );
     }
 }

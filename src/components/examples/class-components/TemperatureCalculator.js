@@ -1,12 +1,14 @@
 import React from 'react';
 import TemperatureInput from './TemperatureInput';
+import ExampleBody from '../../../utils/ExampleBody.js';
+import Row from 'react-bootstrap/Row';
 
 function BoilingVerdict(props){
 
     if(props.celsius >= 100)    
-        return <p>The water would boil!</p>;
+        return <p className="text-danger">The water would boil!</p>;
     else
-        return <p>The water would not boil!</p>
+        return <p className="text-success">The water would not boil!</p>
 }
 
 function tryConvert(temperature, convert) {
@@ -27,7 +29,7 @@ function toFahrenheit(celsius) {
     return (celsius * 9 / 5) + 32;
 }
 
-export default class Calculator extends React.Component{
+export default class TemperatureCalculator extends React.Component{
 
     constructor(props){
         super(props);
@@ -48,17 +50,21 @@ export default class Calculator extends React.Component{
     
     render() {
 
+        const codeFilePath = require("../../../uploads/class-components/Temperature Calculator.zip");
+
         const scale       = this.state.scale;
         const temperature = this.state.temperature;
         const celsius     = (scale === 'f') ? tryConvert(temperature, toCelsius) : temperature;    
         const fahrenheit  = (scale === 'c') ? tryConvert(temperature, toFahrenheit) : temperature;
 
         return (
-            <div>
-                <TemperatureInput scale="c" temperature={celsius} onTemperatureChange={this.handleCelsiusChange} />        
-                <TemperatureInput scale="f" temperature={fahrenheit} onTemperatureChange={this.handleFahrenheitChange} />
+            <ExampleBody codeFilePath={codeFilePath}>
+                <Row className="mb-3">
+                    <TemperatureInput scale="c" temperature={celsius} onTemperatureChange={this.handleCelsiusChange} />        
+                    <TemperatureInput scale="f" temperature={fahrenheit} onTemperatureChange={this.handleFahrenheitChange} />
+                </Row>
                 <BoilingVerdict celsius={parseFloat(celsius)} />      
-            </div>
+            </ExampleBody>
         );
     }
 } 

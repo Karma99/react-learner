@@ -9,7 +9,7 @@ function WelcomeMessage(props){
     );
 }
 
-export default class ClockTick extends React.Component{
+export default class ClockTicks extends React.Component{
 
     constructor(props){
         super(props);
@@ -32,7 +32,7 @@ export default class ClockTick extends React.Component{
 
     render(){
         
-        const codeFilePath = require("../../../uploads/class-components/ClockTick.txt");
+        const codeFilePath = require("../../../uploads/class-components/ClockTicks.txt");
         
         return (
             <ExampleBody codeFilePath={codeFilePath} className="neonBg text-center">

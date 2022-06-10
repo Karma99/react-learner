@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from './SearchBar.js';
 import ProductTable from './ProductTable.js';
+import ExampleBody from '../../../../utils/ExampleBody.js';
 
 export default class FilterableProductTable extends React.Component {
     constructor(props) {
@@ -27,8 +28,11 @@ export default class FilterableProductTable extends React.Component {
     }
   
     render() {
+      
+      const codeFilePath = require("../../../../uploads/class-components/Search Product.zip");
+      
       return (
-        <div className="container">
+        <ExampleBody codeFilePath={codeFilePath}>
           <ProductTable
             products={this.props.products}
             filterText={this.state.filterText}
@@ -41,7 +45,7 @@ export default class FilterableProductTable extends React.Component {
             onFilterTextChange={this.handleFilterTextChange}
             onInStockChange={this.handleInStockChange}
           />
-        </div>
+        </ExampleBody>
       );
     }
  }

@@ -1,6 +1,7 @@
 import React from "react";
 import ProductCategoryRow from './ProductCategoryRow.js';
 import ProductRow from './ProductRow.js';
+import Table from 'react-bootstrap/Table';
 
 export default class ProductTable extends React.Component {
     
@@ -30,15 +31,15 @@ export default class ProductTable extends React.Component {
         });
     
         return (
-            <table className="product-table">
+            <Table responsive bordered hover>
                 <thead>
                     <tr>
-                    <th>Name</th>
-                    <th>Price</th>
+                        <th>Name</th>
+                        <th>Price</th>
                     </tr>
                 </thead>
                 <tbody>{rows}</tbody>
-            </table>
+            </Table>
         );
     }
 }

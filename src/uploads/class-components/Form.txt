@@ -8,7 +8,7 @@ const productOptions = [
 ];
 
 // Using Controlled Components Technique (Except file)
-export default class FormExample extends React.Component{
+export default class Form extends React.Component{
 
     constructor(props) {
         super(props);

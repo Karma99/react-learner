@@ -32,8 +32,8 @@ export const menuItems = [
         link : '/class-component-examples',
         submenu : [
             {
-                link : 'clock-tick',
-                name : 'Clock',
+                link : 'clock-ticks',
+                name : 'Clock Ticks',
                 divider: false
             },
             {
@@ -57,8 +57,8 @@ export const menuItems = [
                 divider: false
             },
             {
-                link : 'calculator',
-                name : 'Temperature Calculator',
+                link : 'temperature-calculator',
+                name : 'Temperature calculator',
                 divider: true
             },
             {

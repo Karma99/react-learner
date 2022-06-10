@@ -15,7 +15,7 @@ import Layout from './Layout';
 import Home from './pages/Home.js';
 
 /* Examples: Class Component */
-import Clock from './components/examples/class-components/Clock.js';
+import ClockTick from './components/examples/class-components/ClockTick.js';
 import Warning from './components/examples/class-components/Warning.js';
 import Toggle from './components/examples/class-components/Toggle.js';
 import Login from './components/examples/class-components/Login.js';
@@ -55,7 +55,7 @@ root.render(
           </Route>
 
           <Route path="class-component-examples">
-            <Route path="clock"   element={<Clock />} />
+            <Route path="clock-tick"   element={<ClockTick />} />
             <Route path="warning" element={<Warning />}/>
             <Route path="toggle"  element={<Toggle />}/>
             <Route path="login"   element={<Login />}/>

@@ -32,7 +32,7 @@ export const menuItems = [
         link : '/class-component-examples',
         submenu : [
             {
-                link : 'clock',
+                link : 'clock-tick',
                 name : 'Clock',
                 divider: false
             },

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 
 import logo from '../assets/images/logo.svg';
-import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Image from 'react-bootstrap/Image';
 import ProgressBar from 'react-bootstrap/ProgressBar'
@@ -23,10 +23,10 @@ export default function HeaderMenu(props){
         <header>
             <Navbar bg="primary" variant="dark" expand="lg" fixed="top" >
                 <Container>
-                    <Navbar.Brand href="/">
+                    <Link to="/" className="navbar-brand">
                         <Image className="App-logo" src={logo} alt="..." width="50" height="50" /> 
                         React Js Learner
-                    </Navbar.Brand>
+                    </Link>
                     <Navbar.Toggle aria-controls="react-learner-nav" />
                     <Navbar.Collapse id="react-learner-nav">
                         <Nav className="me-auto">    
@@ -38,7 +38,7 @@ export default function HeaderMenu(props){
                                     let submenu = [];
     
                                     return (
-                                        <NavDropdown title={item.name} key={'menu-' + index}>
+                                        <NavDropdown title={item.name} key={'menu-' + index} id={ `react-learner-dropdown-${index}`}>
                                             { 
                                                 item.submenu.forEach((subItem, subIndex) => {
                                                 
@@ -47,19 +47,18 @@ export default function HeaderMenu(props){
                                                     }
 
                                                     submenu.push(
-                                                        /* No Page Redirection : SPA
-                                                            <NavDropdown.Item href={item.link + '/' +subItem.link} key={'submenu-'+ index + '-' + subIndex}>
-                                                              {subItem.name}
-                                                            </NavDropdown.Item>
+                                                        /* No Page Redirection : SPA 
+                                                            [use render prop: "as" to convert to react-router-dom -> Link]
                                                         */
-                                                        <Link 
+                                                        <NavDropdown.Item
+                                                            as={Link} 
                                                             className="dropdown-item" 
                                                             to={item.link + '/' +subItem.link} 
                                                             key={'submenu-'+ index + '-' + subIndex}
                                                             data-rr-ui-dropdown-item=""
                                                         > 
                                                             {subItem.name} 
-                                                        </Link>
+                                                        </NavDropdown.Item>
                                                     );
                                                 })
                                             }
@@ -72,14 +71,15 @@ export default function HeaderMenu(props){
                                 else{
                                     
                                     return ( 
-                                        <Link 
+                                        <NavDropdown.Item
+                                            as={Link}  
                                             className="nav-link" 
                                             to={item.link} 
                                             key={'menu-' + index}
                                             data-rr-ui-event-key="/"
                                         > 
                                             {item.name} 
-                                        </Link>
+                                        </NavDropdown.Item>
                                     );
                                 }
                             })

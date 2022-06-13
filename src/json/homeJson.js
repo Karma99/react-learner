@@ -65,6 +65,11 @@ export const menuItems = [
                 link : 'search-product',
                 name : 'Search Product',
                 divider: true
+            },
+            {
+                link : 'click-counter',
+                name : 'Click Counter',
+                divider: true
             }      
         ],
     },

@@ -22,9 +22,10 @@ import Login from './components/examples/class-components/Login.js';
 import FormExample from './components/examples/class-components/FormExample.js';
 import TemperatureCalculator from './components/examples/class-components/TemperatureCalculator.js';
 import FilterableProductTable from './components/examples/class-components/product/FilterableProductTable.js';
+import CounterClass from './components/examples/class-components/Counter.js';
 
 /* Examples: Hooks */
-import Counter from './components/examples/hooks/Counter.js';
+import CounterHook from './components/examples/hooks/Counter.js';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -62,10 +63,11 @@ root.render(
             <Route path="form"    element={<FormExample  productOptions={PRODUCT_OPTIONS}/>}/>
             <Route path="temperature-calculator"     element={<TemperatureCalculator />}/>
             <Route path="search-product" element={<FilterableProductTable products={PRODUCTS} />}/>
+            <Route path="click-counter" element={<CounterClass />} />
           </Route>
 
           <Route path="hook-examples">
-            <Route path="click-counter" element={<Counter />} />
+            <Route path="click-counter" element={<CounterHook />} />
           </Route>
         
         {/* End of Layout Route wrapper */}

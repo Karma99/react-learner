@@ -9,7 +9,6 @@ import {
 import './assets/css/custom.css';
 import { menuItems, sliderImages, toDoList, faqList } from './json/homeJson.js';
 import { PRODUCTS, PRODUCT_OPTIONS } from './json/exampleJson.js';
-import  * as common  from './utils/CommonFunctions.js';
 
 import Layout from './Layout';
 import Home from './pages/Home.js';
@@ -42,12 +41,11 @@ root.render(
                 menuItems: menuItems,
                 sliderImages: sliderImages
               }}
-              common={common} 
             />
           } 
         >
           
-          <Route index element={<Home homeJson={{toDoList:toDoList, faqList:faqList, generateList: common.generateList}}/>} />
+          <Route index element={<Home homeJson={{toDoList:toDoList, faqList:faqList}}/>} />
 
           <Route path="quick-note">
             <Route path="react-installation" />
@@ -61,7 +59,7 @@ root.render(
             <Route path="toggle"  element={<Toggle />}/>
             <Route path="login"   element={<Login />}/>
             <Route path="form"    element={<FormExample  productOptions={PRODUCT_OPTIONS}/>}/>
-            <Route path="temperature-calculator"     element={<TemperatureCalculator />}/>
+            <Route path="temperature-calculator" element={<TemperatureCalculator />}/>
             <Route path="search-product" element={<FilterableProductTable products={PRODUCTS} />}/>
             <Route path="click-counter" element={<CounterClass />} />
           </Route>

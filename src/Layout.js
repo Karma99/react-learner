@@ -21,7 +21,7 @@ function Layout(props) {
       }
     
       <Container className="body-container">
-        <PageBreadcrumb ucFirst={props.common.ucFirst}/>
+        <PageBreadcrumb/>
         
         {/* Load Dynamic Body Component */}
         <Outlet />

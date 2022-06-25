@@ -8,7 +8,7 @@ const Home = (props) => {
     return (
         <div className="home-wrapper">
 
-            <ToDoList toDoList={props.homeJson.toDoList} generateList={props.homeJson.generateList}/>
+            <ToDoList toDoList={props.homeJson.toDoList} />
 
             <Faq faqList={props.homeJson.faqList} />
    

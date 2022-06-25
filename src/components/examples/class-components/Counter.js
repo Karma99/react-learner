@@ -12,20 +12,22 @@ export default class Counter extends React.Component {
     }
 
     componentDidUpdate(){
-        document.title = `Count: ${this.state.count} `;  
+      document.title = `Count: ${this.state.count} `;  
     }
   
     render() {
+      
+      console.log(1);
+      
+      const codeFilePath = require("../../../uploads/class-components/Counter.txt");
 
-        const codeFilePath = require("../../../uploads/class-components/Counter.txt");
-
-        return (
-            <ExampleBody codeFilePath={codeFilePath}>
-            <p>You clicked <span className="text-danger">{this.state.count}</span> times.</p>
-            <Button variant="outline-danger" onClick={() => this.setState({ count: this.state.count + 1 })}>
-                Click me
-            </Button>
-            </ExampleBody>
-        );
+      return (
+        <ExampleBody codeFilePath={codeFilePath}>
+        <p>You clicked <span className="text-danger">{this.state.count}</span> times.</p>
+        <Button variant="outline-danger" onClick={() => this.setState({ count: this.state.count + 1 })}>
+            Click me
+        </Button>
+        </ExampleBody>
+      );
     }
   }

@@ -1,8 +1,9 @@
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import { Link, useLocation  } from 'react-router-dom';
+import {ucFirst} from '../utils/CommonFunctions.js';
 
 
-const breadcrumbItems = (props, location) => {
+const breadcrumbItems = (location) => {
   
   /* Remove Empty values using filter */
   const segments = location.pathname.split('/').filter(n => n);
@@ -19,14 +20,14 @@ const breadcrumbItems = (props, location) => {
     if(index === lastItem){
       return (
         <li className="breadcrumb-item active" aria-current="page" key={`breadcrumb-item-${index}`}>
-          {props.ucFirst(itemName)}
+          {ucFirst(itemName)}
         </li>
       );
     }
     else{
       return (
         <li className="breadcrumb-item" key={`breadcrumb-item-${index}`}>
-          <Link to={path} >{props.ucFirst(itemName)}</Link>
+          <Link to={path} >{ucFirst(itemName)}</Link>
         </li>
       );
     }
@@ -34,7 +35,7 @@ const breadcrumbItems = (props, location) => {
 
 }
 
-const PageBreadcrumb = (props) => {
+const PageBreadcrumb = () => {
 
   const location = useLocation();
 
@@ -48,7 +49,7 @@ const PageBreadcrumb = (props) => {
       <li className="breadcrumb-item">
         <Link to={'/'} role="button" tabIndex="0">Home</Link>
       </li>
-      {breadcrumbItems(props, location)}
+      {breadcrumbItems(location)}
     </Breadcrumb>
   );
 }

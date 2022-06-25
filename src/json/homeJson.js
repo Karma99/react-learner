@@ -154,8 +154,8 @@ export const toDoList = [
         'Google Map and EmailJs',
         'CRUD operation'
       ],
-      link:'',
-      linkName:'',
+      link:'https://www.netlify.com/',
+      linkName:'Free Hosting Netlify',
       timeline: '2 weeks'
     }
 ];

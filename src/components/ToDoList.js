@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
+import {generateList} from '../utils/CommonFunctions.js';
 
 export default function ToDoList(props){
     
@@ -19,7 +20,7 @@ export default function ToDoList(props){
                       <Card.Body>
                         <Card.Title>{item.title}</Card.Title>
                         <div className="p-2">
-                          { (item.text.length === 1) ? item.text[1] : props.generateList(item.text) }
+                          { (item.text.length === 1) ? item.text[1] : generateList(item.text) }
                         </div>
                         <a className="p-2" href={item.link} target="_blank" rel='noreferrer'>{item.linkName}</a>
                       </Card.Body>

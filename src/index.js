@@ -10,7 +10,7 @@ import './assets/css/custom.css';
 import { menuItems, sliderImages, toDoList, faqList } from './json/homeJson.js';
 import { PRODUCTS, PRODUCT_OPTIONS } from './json/exampleJson.js';
 
-import Layout from './Layout';
+import GuestLayout from './GuestLayout';
 import Home from './pages/Home.js';
 
 /* Examples: Class Component */
@@ -35,9 +35,9 @@ root.render(
     <BrowserRouter>
       <Routes>
         
-        {/* Start Layout Route wrapper */}
+        {/* Start Guest Layout Route wrapper */}
         <Route path="/" element={
-            <Layout homeJson={{
+            <GuestLayout homeJson={{
                 menuItems: menuItems,
                 sliderImages: sliderImages
               }}
@@ -68,7 +68,7 @@ root.render(
             <Route path="click-counter" element={<CounterHook />} />
           </Route>
         
-        {/* End of Layout Route wrapper */}
+        {/* End of GuestLayout Route wrapper */}
         </Route>
 
       </Routes>

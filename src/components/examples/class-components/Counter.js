@@ -12,15 +12,13 @@ export default class Counter extends React.Component {
     }
 
     componentDidUpdate(){
-      document.title = `Count: ${this.state.count} `;  
+      document.title = `Count: ${this.state.count} `; 
+      console.log('Render: '+1); 
     }
   
     render() {
-      
-      console.log(1);
-      
       const codeFilePath = require("../../../uploads/class-components/Counter.txt");
-
+      console.log('Render: '+2); 
       return (
         <ExampleBody codeFilePath={codeFilePath}>
         <p>You clicked <span className="text-danger">{this.state.count}</span> times.</p>

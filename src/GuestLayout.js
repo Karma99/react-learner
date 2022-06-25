@@ -8,7 +8,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 
 
-function Layout(props) {
+function GuestLayout(props) {
   
   const location = useLocation();
   
@@ -33,4 +33,4 @@ function Layout(props) {
   );
 }
 
-export default Layout;
+export default GuestLayout;

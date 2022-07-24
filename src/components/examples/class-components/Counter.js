@@ -11,9 +11,16 @@ export default class Counter extends React.Component {
       };
     }
 
-    componentDidUpdate(){
+    componentDidMount(){
       document.title = `Count: ${this.state.count} `; 
-      console.log('Render: '+1); 
+      console.log('Mount: '+1); 
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+      // Optimizing Performance for every re-render
+      if (prevState.count !== this.state.count) {
+        document.title = `Count: ${this.state.count}`;
+      }
     }
   
     render() {

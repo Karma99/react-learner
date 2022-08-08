@@ -13,6 +13,8 @@ import { PRODUCTS, PRODUCT_OPTIONS } from './json/exampleJson.js';
 import GuestLayout from './GuestLayout';
 import Home from './pages/Home.js';
 
+import reportWebVitals from './reportWebVitals';
+
 /* Examples: Class Component */
 import ClockTicks from './components/examples/class-components/ClockTicks.js';
 import Warning from './components/examples/class-components/Warning.js';
@@ -25,8 +27,7 @@ import CounterClass from './components/examples/class-components/Counter.js';
 
 /* Examples: Hooks */
 import CounterHook from './components/examples/hooks/Counter.js';
-
-import reportWebVitals from './reportWebVitals';
+import StopWatch from './components/examples/hooks/StopWatch';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -66,6 +67,7 @@ root.render(
 
           <Route path="hook-examples">
             <Route path="click-counter" element={<CounterHook />} />
+            <Route path="stop-watch" element={<StopWatch />} />
           </Route>
         
         {/* End of GuestLayout Route wrapper */}

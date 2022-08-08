@@ -12,15 +12,19 @@ export default function Counter() {
   // Similar to componentDidMount and componentDidUpdate:  
   useEffect(() => {    
     // Update the document title using the browser API   
-    document.title = `Count: ${count} `;  
-  }, [count]); // Performance Optimization : Only re-run the effect if count changes
+    document.title = `Count: ${count}`;  
+  }, [count]); // Performance Optimization : Only re-run the effect if count changes [re-render stops at 0 check console]
+
+  console.log(`rendered count ${count}`);
 
   return (
     <ExampleBody codeFilePath={codeFilePath}>
-      <p>You clicked <span className="text-primary">{count}</span> times.</p>
-      <Button variant="outline-primary" onClick={() => setCount(count + 1)}>
-        Click me
-      </Button>
+      <p>
+        You clicked <span className="text-primary">{count}</span> times.
+        <Button variant="outline-primary" className="ms-3" onClick={() => setCount(0)}> &#8635; </Button>
+      </p>
+      <Button variant="outline-success" className="me-3" onClick={() => setCount(count + 1)}> + </Button>
+      <Button variant="outline-danger" className="ms-3" onClick={()  => setCount(count > 0 ? count - 1 : 0)}> - </Button>
     </ExampleBody>
   );
 }

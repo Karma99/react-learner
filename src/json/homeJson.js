@@ -12,17 +12,17 @@ export const menuItems = [
         submenu : [
             {
                 link : '',
-                name : 'React Installation',
-                divider: false
-            },
-            {
-                link : '',
-                name : 'Useful Packages',
+                name : 'Javascript Notes Modern ES6 and more.txt',
                 divider: false
             },
             {
                 link : '',
                 name : 'React Doc. Summary',
+                divider: false
+            },
+            {
+                link : '',
+                name : 'Useful Packages',
                 divider: false
             } 
         ],
@@ -81,6 +81,11 @@ export const menuItems = [
                 link : 'click-counter',
                 name : 'Click Counter',
                 divider: false
+            },
+            {
+                link : 'stop-watch',
+                name : 'Stop Watch',
+                divider: false
             }
         ],
     }
@@ -95,7 +100,7 @@ export const sliderImages = [
     },
     {
         fileName: "slider-react-inner-me.png",
-        title   : "Now What?",
+        title   : "Stuck, Now What?",
         summary : "Get inspired if all your hope is lost."
     },
     {
@@ -118,7 +123,8 @@ export const toDoList = [
           'Rest parameters',
           'Spread Operator',
           'Computed property names',
-          'Destructuring assignment'
+          'Destructuring assignment',
+          'Object prototypes'
         ],
         link:'https://www.youtube.com/watch?v=pN6jk0uUrD8&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=1',
         linkName:'Video Tutorial',
@@ -133,9 +139,10 @@ export const toDoList = [
         'Class Component',
         'Higher-Order Components',
         'Uncontrolled Components',
-        'Hooks',
         'Lifting State Up',
-        'Composition vs Inheritance'
+        'Composition vs Inheritance',
+        'Hooks',
+        'Reducer'
       ],
       link:'https://reactjs.org/docs/getting-started.html',
       linkName:'React Documentation',
@@ -151,7 +158,8 @@ export const toDoList = [
         'Body',
         'Footer',
         'Navigation using react router',
-        'Google Map and EmailJs',
+        'Contact Us (EmailJs)',
+        'Weather or Search api',
         'CRUD operation'
       ],
       link:'https://www.netlify.com/',
@@ -181,6 +189,14 @@ export const faqList = [
     {
         title: 'How many data model does react use ?',
         summary: 'There are two types of “model” data in React: props and state.',
+    },
+    {
+        title: 'When does componenet re-render ?',
+        summary: 'React components automatically re-render whenever there is a change in their state or props.',
+    },
+    {
+        title: 'Do two components using the same custom Hook share state ?',
+        summary: 'No. Custom Hooks are a mechanism to reuse stateful logic not state itself. Every time we call a custom hook all state and effects inside of it are fully isolated',
     },
 
 ];

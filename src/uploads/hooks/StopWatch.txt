@@ -2,6 +2,7 @@ import React, {useReducer, useEffect, useRef} from "react";
 
 const initialState = {
   isRunning: false,
+  isPaused: false,
   centiseconds: 0, /* centisecond(6,000 sec) and millisecond(60,000 sec) (1 mil = 0.1 cs) */
   seconds: 0,
   minutes: 0,
@@ -12,9 +13,9 @@ const initialState = {
 function reducer(state, action) {
   switch (action.type) {
     case "START":
-      return { ...state, isRunning: true };
+      return { ...state, isRunning: true, isPaused: false };
     case "STOP":
-      return { ...state, isRunning: false };
+      return { ...state, isRunning: false, isPaused: true };
     case "RESET":
       return initialState;
     case "SET_CENTISECONDS":
@@ -59,7 +60,7 @@ function useInterval(callback, delay) {
 export default function StopWatch(){
 
     const [state, dispatch] = useReducer(reducer, initialState);
-    const { centiseconds, seconds, minutes, hours, isRunning } = state;
+    const { centiseconds, seconds, minutes, hours, isRunning, isPaused } = state;
     
     /* Call Custom Hook in order */
     useInterval(() => {
@@ -118,7 +119,7 @@ export default function StopWatch(){
         </p>
 
         {isRunning === false && (
-          <button className="button-login" onClick={() => dispatch({type: 'START' })}> Start </button>
+          <button className="button-login" onClick={() => dispatch({type: 'START' })}> {isPaused === true ? 'Resume' : 'Start' } </button>
         )}
 
         {isRunning === true && (

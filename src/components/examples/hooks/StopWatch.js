@@ -5,6 +5,7 @@ import useInterval from '../../../utils/useInterval.js';
 
 const initialState = {
   isRunning: false,
+  isPaused: false,
   centiseconds: 0, /* centisecond(6,000 sec) and millisecond(60,000 sec) (1 mil = 0.1 cs) */
   seconds: 0,
   minutes: 0,
@@ -15,9 +16,9 @@ const initialState = {
 function reducer(state, action) {
   switch (action.type) {
     case "START":
-      return { ...state, isRunning: true };
+      return { ...state, isRunning: true, isPaused: false };
     case "STOP":
-      return { ...state, isRunning: false };
+      return { ...state, isRunning: false, isPaused: true };
     case "RESET":
       return initialState;
     case "SET_CENTISECONDS":
@@ -39,7 +40,7 @@ export default function StopWatch(){
   const codeFilePath = require("../../../uploads/hooks/StopWatch.txt");
 
   const [state, dispatch] = useReducer(reducer, initialState);
-  const { centiseconds, seconds, minutes, hours, isRunning } = state;
+  const { centiseconds, seconds, minutes, hours, isRunning, isPaused } = state;
   
   /* Call Custom Hook in order */
   useInterval(() => {
@@ -97,15 +98,15 @@ export default function StopWatch(){
         }
       </p>
 
-      {isRunning === false && (
-        <Button variant="outline-success" className="me-3" onClick={() => dispatch({type: 'START' })}> Start </Button>
+      {(isRunning === false) && (
+        <Button variant="outline-success" className="me-3" onClick={() => dispatch({type: 'START' })}> {isPaused === true ? 'Resume' : 'Start' } </Button>
       )}
 
       {isRunning === true && (
         <Button variant="outline-danger" className="me-3" onClick={()  => dispatch({type: 'STOP' })}> Stop </Button>
       )}
 
-      <Button variant="outline-primary" onClick={() => dispatch({type: 'RESET' })}> Reset </Button>
+      <Button variant="outline-warning" onClick={() => dispatch({type: 'RESET' })}> Reset </Button>
     </ExampleBody>
   );
 }

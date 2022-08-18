@@ -6,22 +6,15 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Image from 'react-bootstrap/Image';
-import ProgressBar from 'react-bootstrap/ProgressBar'
+import {useTheme} from '../utils/ThemeProvider.js';
 
 export default function HeaderMenu(props){
     
-    const now = 10;
-    const progressInstance = <ProgressBar   
-        striped
-        animated  
-        variant="warning"
-        className='scroll-progress d-none' 
-        now={now} 
-    />;
-    
+    const theme = useTheme();
+
     return (
         <header>
-            <Navbar bg="primary" variant="dark" expand="lg" fixed="top" >
+            <Navbar bg={theme.pageTheme.header.bg} variant={theme.pageTheme.header.variant} expand="lg" fixed="top" >
                 <Container>
                     <Link to="/" className="navbar-brand">
                         <Image className="App-logo" src={logo} alt="..." width="50" height="50" /> 
@@ -88,7 +81,6 @@ export default function HeaderMenu(props){
                     </Navbar.Collapse>
                 </Container>
             </Navbar>                        
-            {progressInstance}
         </header>
     );
 }

@@ -83,6 +83,11 @@ export const menuItems = [
                 divider: false
             },
             {
+                link : 'theme',
+                name : 'Theme',
+                divider: false
+            },
+            {
                 link : 'stop-watch',
                 name : 'Stop Watch',
                 divider: false
@@ -146,7 +151,7 @@ export const toDoList = [
       ],
       link:'https://reactjs.org/docs/getting-started.html',
       linkName:'React Documentation',
-      timeline: '1 month'
+      timeline: '3 month'
     },
     {
       border: 'warning',
@@ -164,7 +169,7 @@ export const toDoList = [
       ],
       link:'https://www.netlify.com/',
       linkName:'Free Hosting Netlify',
-      timeline: '2 weeks'
+      timeline: '1 month'
     }
 ];
 

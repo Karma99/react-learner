@@ -1,13 +1,15 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import {useTheme} from '../utils/ThemeProvider.js';
 
 export default function Footer()
 {
-    const year = new Date().getFullYear();     
+    const theme = useTheme();
+    const year  = new Date().getFullYear();     
     
     return (
-        <footer className="bg-dark text-white">
+        <footer className={theme.pageTheme.footer}>
             <Container>
                 <Row className="text-center">
                     <Col>

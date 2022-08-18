@@ -85,7 +85,7 @@ export default function StopWatch(){
         hours: hours === 59 ? 0 : hours + 1,
       },
     });
-  }, 60000);
+  }, 3600000);
   
   return (
     <ExampleBody codeFilePath={codeFilePath}>

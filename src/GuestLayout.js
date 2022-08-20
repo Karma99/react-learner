@@ -1,9 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import HeaderMenu from './components/HeaderMenu.js';
-import ImageSlider from './components/ImageSlider.js';
-import PageBreadcrumb from './components/PageBreadcrumb.js';
-import Footer from './components/Footer.js';
+import HeaderMenu from './components/HeaderMenu';
+import ImageSlider from './components/ImageSlider';
+import PageBreadcrumb from './components/PageBreadcrumb';
+import Footer from './components/Footer';
 import { Outlet, useLocation } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 

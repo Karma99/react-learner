@@ -7,27 +7,27 @@ import {
 } from "react-router-dom";
 
 import './assets/css/custom.css';
-import { menuItems, sliderImages, toDoList, faqList } from './json/homeJson.js';
-import { PRODUCTS, PRODUCT_OPTIONS} from './json/exampleJson.js';
+import { menuItems, sliderImages, toDoList, faqList } from './json/homeJson';
+import { PRODUCTS, PRODUCT_OPTIONS} from './json/exampleJson';
 
 import GuestLayout from './GuestLayout';
-import Home from './pages/Home.js';
+import Home from './pages/Home';
 
 import reportWebVitals from './reportWebVitals';
 
 /* Examples: Class Component */
-import ClockTicks from './components/examples/class-components/ClockTicks.js';
-import Warning from './components/examples/class-components/Warning.js';
-import Toggle from './components/examples/class-components/Toggle.js';
-import Login from './components/examples/class-components/Login.js';
-import FormExample from './components/examples/class-components/FormExample.js';
-import TemperatureCalculator from './components/examples/class-components/TemperatureCalculator.js';
-import FilterableProductTable from './components/examples/class-components/product/FilterableProductTable.js';
-import CounterClass from './components/examples/class-components/Counter.js';
+import ClockTicks from './components/examples/class-components/ClockTicks';
+import Warning from './components/examples/class-components/Warning';
+import Toggle from './components/examples/class-components/Toggle';
+import Login from './components/examples/class-components/Login';
+import FormExample from './components/examples/class-components/FormExample';
+import TemperatureCalculator from './components/examples/class-components/TemperatureCalculator';
+import FilterableProductTable from './components/examples/class-components/product/FilterableProductTable';
+import CounterClass from './components/examples/class-components/Counter';
 
 /* Examples: Hooks */
-import CounterHook from './components/examples/hooks/Counter.js';
-import ThemeProvider from './utils/ThemeProvider.js';
+import CounterHook from './components/examples/hooks/Counter';
+import ThemeProvider from './utils/ThemeProvider';
 import Theme from './components/examples/hooks/Theme';
 import StopWatch from './components/examples/hooks/StopWatch';
 

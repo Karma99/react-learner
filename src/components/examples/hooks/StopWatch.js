@@ -1,7 +1,7 @@
 import React, {useReducer} from "react";
 import Button from 'react-bootstrap/Button';
-import ExampleBody from '../../../utils/ExampleBody.js';
-import useInterval from '../../../utils/useInterval.js';
+import ExampleBody from '../../../utils/ExampleBody';
+import useInterval from '../../../utils/useInterval';
 
 const initialState = {
   isRunning: false,

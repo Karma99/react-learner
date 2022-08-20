@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
-import ExampleBody from '../../../utils/ExampleBody.js';
+import ExampleBody from '../../../utils/ExampleBody';
 
 // Using Controlled Components Technique (Except file)
 export default class FormExample extends React.Component{

@@ -1,6 +1,6 @@
 import React from "react";
-import ToDoList from '../components/ToDoList.js';
-import Faq from '../components/Faq.js';
+import ToDoList from '../components/ToDoList';
+import Faq from '../components/Faq';
 
 
 const Home = (props) => {

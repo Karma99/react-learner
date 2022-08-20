@@ -1,6 +1,6 @@
 import React from 'react';
 import TemperatureInput from './TemperatureInput';
-import ExampleBody from '../../../utils/ExampleBody.js';
+import ExampleBody from '../../../utils/ExampleBody';
 import Row from 'react-bootstrap/Row';
 
 function BoilingVerdict(props){

@@ -1,6 +1,6 @@
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import { Link, useLocation  } from 'react-router-dom';
-import {ucFirst} from '../utils/CommonFunctions.js';
+import {ucFirst} from '../utils/CommonFunctions';
 
 
 const breadcrumbItems = (location) => {

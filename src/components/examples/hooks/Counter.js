@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Button from 'react-bootstrap/Button';
-import ExampleBody from '../../../utils/ExampleBody.js';
+import ExampleBody from '../../../utils/ExampleBody';
 
 export default function Counter() {
     

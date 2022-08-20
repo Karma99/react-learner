@@ -3,7 +3,7 @@ import React, { useEffect, useContext, useState } from 'react';
 /* Page Themes */
 export const PAGE_THEMES = {
     primary: {
-        header: { bg: "primary", variant: 'dark'},
+        header: { bg: "primary", variant: 'dark', color: '#000'},
         footer: "bg-dark text-white",
     },
     light: {

@@ -1,5 +1,5 @@
 import Card from 'react-bootstrap/Card';
-import {getFileName, getFileExt} from '../utils/CommonFunctions.js';
+import {getFileName, getFileExt} from '../utils/CommonFunctions';
 
 const DownloadCode = (props) => {
 

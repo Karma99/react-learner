@@ -1,5 +1,5 @@
 import Card from 'react-bootstrap/Card';
-import DownloadCode from '../components/DownloadCode.js';
+import DownloadCode from '../components/DownloadCode';
 
 export default function ExampleBody(props){
 

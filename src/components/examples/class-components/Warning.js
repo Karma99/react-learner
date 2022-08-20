@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import ExampleBody from '../../../utils/ExampleBody.js';
+import ExampleBody from '../../../utils/ExampleBody';
 
 function ListItem(props) {
     // Correct! There is no need to specify the key here:  

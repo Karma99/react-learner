@@ -1,6 +1,6 @@
 import React from "react";
-import ProductCategoryRow from './ProductCategoryRow.js';
-import ProductRow from './ProductRow.js';
+import ProductCategoryRow from './ProductCategoryRow';
+import ProductRow from './ProductRow';
 import Table from 'react-bootstrap/Table';
 
 export default class ProductTable extends React.Component {

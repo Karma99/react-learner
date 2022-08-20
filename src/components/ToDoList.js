@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Card from 'react-bootstrap/Card';
-import {generateList} from '../utils/CommonFunctions.js';
+import {generateList} from '../utils/CommonFunctions';
 
 export default function ToDoList(props){
     

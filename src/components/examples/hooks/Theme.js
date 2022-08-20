@@ -1,7 +1,7 @@
 
 import Button from 'react-bootstrap/Button';
-import ExampleBody from '../../../utils/ExampleBody.js';
-import {useTheme, PAGE_THEMES} from '../../../utils/ThemeProvider.js';
+import ExampleBody from '../../../utils/ExampleBody';
+import {useTheme, PAGE_THEMES} from '../../../utils/ThemeProvider';
 
 export default function Theme(){
 

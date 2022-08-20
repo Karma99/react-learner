@@ -1,5 +1,5 @@
 import React from 'react';
-import ExampleBody from '../../../utils/ExampleBody.js';
+import ExampleBody from '../../../utils/ExampleBody';
 import Button from 'react-bootstrap/Button';
 
 function LoginButton(props) {

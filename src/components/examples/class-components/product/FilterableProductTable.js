@@ -1,7 +1,7 @@
 import React from "react";
-import SearchBar from './SearchBar.js';
-import ProductTable from './ProductTable.js';
-import ExampleBody from '../../../../utils/ExampleBody.js';
+import SearchBar from './SearchBar';
+import ProductTable from './ProductTable';
+import ExampleBody from '../../../../utils/ExampleBody';
 
 export default class FilterableProductTable extends React.Component {
     constructor(props) {
